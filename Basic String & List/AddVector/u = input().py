@@ -1,17 +1,8 @@
-u = input()
-v = input()
+u = str(input())
+v = str(input())
 
-mod_u = u[1:9]
-mod_v = v[1:9]
+u1, u2, u3 = list(map(float, u.strip("[] ").split(", ")))
+v1, v2, v3 = list(map(float, v.strip("[] ").split(", ")))
+ans = [u1+v1, u2+v2, u3+v3]
 
-ux, uy, uz = mod_u.split(", ")
-list_u = [float(ux), float(uy), float(uz)]
-vx, vy, vz = mod_v.split(", ")
-list_v = [float(vx), float(vy), float(vz)]
-
-ux, uy, uz = list_u
-vx, vy, vz = list_v
-
-sum =[ux+vx, uy+vy, uz+vz]
-
-print(u,"+",v,"=",sum)
+print(u,'+',v,'=', ans)
